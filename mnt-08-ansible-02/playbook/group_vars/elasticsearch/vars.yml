@@ -1,0 +1,2 @@
+---
+elastic_home: "/opt/elastic/{{ elk_version }}"

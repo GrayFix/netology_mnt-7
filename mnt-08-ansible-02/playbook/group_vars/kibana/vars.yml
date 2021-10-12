@@ -1,0 +1,2 @@
+---
+kibana_home: "/opt/kibana/{{ elk_version }}"
