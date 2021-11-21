@@ -1,0 +1,19 @@
+---
+- name: Install Elasticsearch
+  hosts: g_elasticsearch
+  become_method: su
+  roles:
+    - elasticsearch-role
+    - logstash-role
+
+- name: Install Kibana
+  hosts: g_kibana
+  become_method: su
+  roles:
+    - kibana-role
+
+- name: Install Filebeat
+  hosts: g_filebeat
+  become_method: su
+  roles:
+    - filebeat-role

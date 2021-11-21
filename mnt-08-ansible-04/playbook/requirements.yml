@@ -1,0 +1,17 @@
+---
+  - src: https://github.com/GrayFix/mnt-8.4-elasticsearch-role.git
+    scm: git
+    version: main
+    name: elasticsearch-role
+  - src: https://github.com/GrayFix/mnt-8.4-kibana-role.git
+    scm: git
+    version: main
+    name: kibana-role
+  - src: https://github.com/GrayFix/mnt-8.4-logstash-role.git
+    scm: git
+    version: main
+    name: logstash-role
+  - src: https://github.com/GrayFix/mnt-8.4-filebeat-role.git
+    scm: git
+    version: main
+    name: filebeat-role
