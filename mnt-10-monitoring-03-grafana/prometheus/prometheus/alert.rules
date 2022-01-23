@@ -1,0 +1,29 @@
+groups:
+- name: example
+  rules:
+
+  - alert: high_load
+    expr: node_load1 > 0.5
+    for: 2m
+    labels:
+      severity: page
+    annotations:
+      summary: "Instance {{ $labels.instance }} under high load"
+
+  - alert: low_mem
+    expr: node_memory_MemFree_bytes < 1024*1024*1024*1
+    for: 5m
+    labels:
+      severity: page
+    annotations:
+      summary: "Instance {{ $labels.instance }} under low memory"
+
+  - alert: low_disk
+    expr: node_filesystem_free_bytes{device="/dev/sda4", fstype="xfs", instance="node_exporter:9100", job="node-exporter", mountpoint="/"} < 1024*1024*1024*1
+    for: 5m
+    labels:
+      severity: page
+    annotations:
+      summary: "Instance {{ $labels.instance }} under low disk space"
+
+
